@@ -3,6 +3,9 @@
   margin: 0 auto;
   max-width: 700px; }
 
+.container-narrow > .content {
+  margin-top: 50px;}
+
 .container-narrow > hr {
   margin: 30px 0; }
 
@@ -63,3 +66,25 @@
   background: #57A957;
   border: 1px solid #4c964d;
   color: #FFF; }
+.friends {
+  position: relative;}
+.friends span.title {
+  position: absolute;
+  top: -30px;
+  font-weight: bold;
+  left: 10px;
+  background: #fff;}
+
+ul.info li {
+  height: 40px;
+  line-height: 40px;}
+
+ul.info > li > a {
+  display: block;
+  height: 32px;
+  line-height: 32px;}
+
+ul.info > li > a > img {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;}
