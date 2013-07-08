@@ -1,10 +1,22 @@
 /* Custom container */
 .container-narrow {
   margin: 0 auto;
-  max-width: 700px; }
+  max-width: 960px; }
 
-.container-narrow > .content {
-  margin-top: 50px;}
+.container-narrow > .row-fluid>.content,
+.container-narrow > .row-fluid>.sidebar {
+  margin-top: 20px;
+  background: #fff;
+  margin-bottom: 20px;
+  box-shadow: rgba(200,200,20);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: rgba(200,200,20);
+  -khtml-box-shadow: rgba(200,200,200,1) 0 2px 18px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  padding: 15px;
+}
 
 .container-narrow > hr {
   margin: 30px 0; }
@@ -88,3 +100,54 @@ ul.info > li > a > img {
   width: 32px;
   height: 32px;
   margin-right: 10px;}
+
+.article-block,
+.page-block {
+	position: relative;
+	margin-top: 3em;
+}
+.article-block:first-child,
+.page-block:first-child {
+	margin-top: 1em;
+}
+
+.article-block>h2.article-year,
+.page-block>h2.article-year{
+	position: absolute;
+	color: #c7c7c7;
+	font-size: 2.0em;
+	top: -1.1em;
+	left: 0.9em;
+	z-index: 9;
+	background: #fff;
+}
+
+.article-block>ul.article-list,
+.page-block>ul.page-list {
+	margin-left: 0em;
+}
+
+.article-block>ul.article-list>li,
+.page-block>ul.page-list>li {
+  position: relative;
+  border-top: 1px dashed #c7c7c7;
+  padding-left: 5em;
+  min-height: 4.5em;
+  line-height: 4.5em;
+} 
+
+.article-block>ul.article-list>li>span.post-date,
+.page-block>ul.page-list>li>span.post-date {
+	position: absolute;
+	font-size: 0.9em;
+	line-height: 3.0em;
+	text-transform: uppercase;
+	left: 0em;
+	top: 1.8em;
+}
+
+.article-block>ul.article-list>li>h3,
+.page-block>ul.page-list>li>a {
+  font-size: 1.1em;
+  font-weight: bold;
+}

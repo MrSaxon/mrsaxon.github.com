@@ -1,0 +1,25 @@
+<div class="span3 sidebar pull-left">
+	<h4 class="breadcrumb">Recent Posts</h4>
+	<ul class="unstyled recent">
+	  {% for post in site.posts limit:5 %}
+		  <li><a href="{{ BASE_PATH }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	  {% endfor %}
+	</ul>	
+</div>
+
+<div class="span3 sidebar pull-left">
+	<h4 class="breadcrumb">RSS</h4>
+	<a href="/atom.xml" target="_blank">subscribe via RSS</a>
+</div>
+
+<style>
+.sidebar .breadcrumb {margin-top: -15px; margin-left: -15px; margin-right: -15px;}
+.sidebar ul.recent li a {
+	display: inline-block;
+	width:200px;
+	white-space:nowrap;
+	word-break:keep-all;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+</style>

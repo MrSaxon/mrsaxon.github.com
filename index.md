@@ -21,10 +21,10 @@ tagline: Supporting tagline
 	</div>
 </div>
 
-<hr>
+<hr style="margin-top: 4em;">
 
 <div class="friends">
 	<span class="title">&nbsp;Friends&nbsp;</span>
-	<a href="http://leiqzhang.com"><span class="label">leiqzhang</span></a>
-	<a href="http://lanbolee.com/blog/"><span class="label label-success">博之博</span></a>
+	<a target="_blank" href="http://leiqzhang.com"><span class="label">leiqzhang</span></a>
+	<a target="_blank" href="http://lanbolee.com/blog/"><span class="label label-success">博之博</span></a>
 </div>

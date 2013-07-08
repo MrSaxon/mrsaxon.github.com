@@ -27,26 +27,35 @@ Usage:
     {% capture next_month %}{{ post.previous.date | date: "%B" }}{% endcapture %}
   
     {% if forloop.first %}
-      <h2>{{this_year}}</h2>
-      <h3>{{this_month}}</h3>
-      <ul>
+      <div class="article-block">
+      <h2 class="article-year">{{this_year}}</h2>
+      <ul class="unstyled article-list">
     {% endif %}
   
-    <li><span>{{ post.date | date: "%B %e, %Y" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+    <li>
+		<span class="post-date label label-success">{{ post.date | date: "%b %d" }}</span>
+		<h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
+		<ul class="tag_box inline">
+		  {% assign tags_list = post.tags %}  
+		  {% include JB/tags_list %}
+		</ul>
+	</li>
   
     {% if forloop.last %}
       </ul>
+	  </div>
     {% else %}
       {% if this_year != next_year %}
         </ul>
-        <h2>{{next_year}}</h2>
-        <h3>{{next_month}}</h3>
-        <ul>
+		</div>
+		
+		<div class="article-block">
+        <h2 class="article-year">{{next_year}}</h2>
+        <ul class="unstyled article-list">
       {% else %}    
         {% if this_month != next_month %}
           </ul>
-          <h3>{{next_month}}</h3>
-          <ul>
+          <ul class="unstyled article-list">
         {% endif %}
       {% endif %}
     {% endif %}

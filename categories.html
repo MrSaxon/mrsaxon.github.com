@@ -13,10 +13,12 @@ group: navigation
 
 
 {% for category in site.categories %} 
-  <h2 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
-  <ul>
+<div class="page-block">
+  <h2 class="article-year" id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
+  <ul class="unstyled page-list">
     {% assign pages_list = category[1] %}  
     {% include JB/pages_list %}
   </ul>
+</div>
 {% endfor %}
 
