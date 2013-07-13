@@ -15,7 +15,7 @@ tags: ["PHP配置", "引用配置"]
 
 php.ini的原文如下：
 
-{% highlight php %}
+{% highlight java %}
 ; Whether to enable the ability to force arguments to be passed by reference
 ; at function call time.  This method is deprecated and is likely to be
 ; unsupported in future versions of PHP/Zend.  The encouraged method of
@@ -34,7 +34,7 @@ php.ini的原文如下：
 </blockquote>
 后查看自己的代码传递引用参数风格为：
 
-{% highlight php %}
+{% highlight java %}
 function exampleFunc($arg1, $arg2) {
     //todo something
 }
@@ -46,7 +46,7 @@ exampleFunc('arg1', &$array);
 
 于是乎本人将自己的代码进行了修正，使用了下面的形式接触这种warning：
 
-{% highlight php %}
+{% highlight java %}
 function exampleFunc($arg1, &$arg2) {
     //todo something
 }

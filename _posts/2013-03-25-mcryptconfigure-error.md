@@ -9,7 +9,7 @@ tags: ["mcrypt", "mhash版本低"]
 
 当安装mcrypt遇到以上错误时候，可以使用以下方式进行解决
 
-{% highlight php %}
+{% highlight java %}
 export LD_LIBRARY_PATH=/usr/local/lib
 export LDFLAGS="-L/user/local/lib/ -I/usr/local/include/"
 export CFLAGS="-I/usr/local/include/"
