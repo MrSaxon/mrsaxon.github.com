@@ -1,0 +1,80 @@
+{% if site.JB.shares.provider and page.shares != false %}
+
+{% case site.JB.shares.provider %}
+{% when "self" %}
+<div class="row-fluid post-full">
+	<div class="share">
+		<span class="desc"><b>分享到：</b></span>
+		<a href="#" class="sina"></a>
+		<a href="#" class="renren"></a>
+		<a href="#" class="msn"></a>
+		<a href="#" class="qzone"></a>
+		<a href="#" class="kaixin"></a>
+		<a href="#" class="qq_weibo"></a>
+	</div>
+</div>
+
+<style>
+.share>.desc,.share a{display: block;height: 32px;line-height: 32px;float: left;}
+.share a {
+	width: 32px;
+	background-image: url(/assets/images/passit_bar_32.png);
+	cursor: pointer;
+	float: left;
+	margin-right: 3px;
+	position: relative;
+	top: 0;
+}
+.share a.sina {background-position: 0px 0px;}
+.share a.renren {background-position: 0px -64px;}
+.share a.msn {background-position: 0px -2528px;}
+.share a.qzone {background-position: 0px -1536px;}
+.share a.kaixin {background-position: 0px -32px;}
+.share a.qq_weibo {background-position: 0px -2144px;}
+</style>
+
+<script>
+	(function($) {
+		var Event = {
+			init: function() {
+				$(".share a").hover(function(){
+					$(this).animate({top:"-5px"},100);
+				},function(){
+					$(this).animate({top:"0px"},100);
+				});
+			}
+		};
+
+		var Post = {
+			init: function() {
+				Event.init();
+			}
+		};
+
+		$(Post.init);
+	})(jQuery);
+</script>
+{% when "baidu" %}
+<ul class="inline">
+	<li>
+		<!-- Baidu Button BEGIN -->
+		<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+		<span class="bds_more">分享到：</span>
+		<a class="bds_qzone"></a>
+		<a class="bds_tsina"></a>
+		<a class="bds_tqq"></a>
+		<a class="bds_renren"></a>
+		<a class="bds_t163"></a>
+		<a class="shareCount"></a>
+		</div>
+		<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=1165504" ></script>
+		<script type="text/javascript" id="bdshell_js"></script>
+		<script type="text/javascript">
+		document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+		</script>
+		<!-- Baidu Button END -->
+	</li>
+</ul>
+{% endcase %}
+
+{% endif %}

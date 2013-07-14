@@ -93,7 +93,11 @@ JB :
       num_posts: 5
       width: 580
       colorscheme: light
-   
+  # Settings for share helper
+  #
+  shares :
+    provider : baidu
+
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
   # Set 'provider' to false to turn analytics off globally.
