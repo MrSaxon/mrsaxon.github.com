@@ -12,15 +12,17 @@ ZooKeeper 是一个为分布式应用所设计的分布的、开源的协调服�
 
 ### Zookeeper下载地址   
 {% highlight php %}   
-http://zookeeper.apache.org/releases.html`  
+http://zookeeper.apache.org/releases.html   
 {% endhighlight %}
 
 本人下载最新稳定版本zookeeper-3.4.6，解压至/home/opt/zookeeper-3.4.6   
 
 ###设置环境变量   
+{% highlight php %}   
 \#Set ZooKeeper Enviroment   
 export ZOOKEEPER_HOME=/home/opt/zookeeper-3.4.6    
 export PATH=$PATH:$ZOOKEEPER_HOME/bin:$ZOOKEEPER_HOME/conf   
+{% endhighlight %}
 
 ###修改配置文件
 Zookeeper的模式分为三种：单机模式、集群模式、伪集群模式   
