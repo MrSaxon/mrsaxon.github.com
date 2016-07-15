@@ -7,8 +7,8 @@ tags: ["MAC"]
 ---
 {% include JB/setup %}
 
-{% highlight php %}
+```php
 sudo vim /etc/fstab
 
 10.81.5.20:/video /opt/samba url automounted,url==smb://user:pass123@10.81.5.20/samba 0 0
-{% endhighlight %}
+```

@@ -22,14 +22,14 @@ tags: ["Linux", "crontab", "shell", "中文乱码"]
 
 在用户环境下执行下面的命令：   
 
-{% highlight php %}
+```php
 echo $LANG
-{% endhighlight %}   
+```   
 
 将输出得到的内容（例如：zh_CN.UTF-8），那么就在你执行的crontab脚本中增加下面的一行命令即可：
 
-{% highlight php %}
+```php
 export LANG=en_US.UTF-8
-{% endhighlight %}   
+```   
 
 最终就彻底解决了中文无法正常推送的问题

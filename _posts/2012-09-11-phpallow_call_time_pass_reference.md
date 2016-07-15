@@ -15,7 +15,7 @@ tags: ["PHP配置", "引用配置"]
 
 php.ini的原文如下：
 
-{% highlight php %}
+```php
 ; Whether to enable the ability to force arguments to be passed by reference
 ; at function call time.  This method is deprecated and is likely to be
 ; unsupported in future versions of PHP/Zend.  The encouraged method of
@@ -25,7 +25,7 @@ php.ini的原文如下：
 ; with future versions of the language (you will receive a warning each time
 ; you use this feature, and the argument will be passed by value instead of by
 ; reference).
-{% endhighlight %}
+```
 翻译过来的意思如下：
 
 <blockquote>
@@ -34,7 +34,7 @@ php.ini的原文如下：
 </blockquote>
 后查看自己的代码传递引用参数风格为：
 
-{% highlight php %}
+```php
 <?php
 function exampleFunc($arg1, $arg2) {
     //todo something
@@ -42,12 +42,12 @@ function exampleFunc($arg1, $arg2) {
 
 $array = array(1);
 exampleFunc('arg1', &$array);
-{% endhighlight %}
+```
 而这种使用如上面的翻译所说会影响到整体代码的整洁，没有通过函数的参数格式去控制传入参数的的类型，PHP中不建议这样去写，但是本身不影响程序使用，所以为php的warning
 
 于是乎本人将自己的代码进行了修正，使用了下面的形式接触这种warning：
 
-{% highlight php %}
+```php
 <?php
 function exampleFunc($arg1, &$arg2) {
     //todo something
@@ -55,5 +55,5 @@ function exampleFunc($arg1, &$arg2) {
 
 $array = array(1);
 exampleFunc('arg1', $array);
-{% endhighlight %}
+```
 建议大家在写代码的时候将allow_call_time_pass_reference设置为Off，提高自己的代码质量！:)

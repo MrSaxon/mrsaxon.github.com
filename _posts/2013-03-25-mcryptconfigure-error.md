@@ -8,14 +8,14 @@ tags: ["mcrypt", "mhash版本低"]
 {% include JB/setup %}
 当mcrypt安装遇到
 
-{% highlight php %}
+```php
 configure: error: “You need at least libmhash 0.8.15 to compile this program. http://mhash.sf.net/”
-{% endhighlight %}
+```
 
 错误时候，可以使用以下方式进行解决
 
-{% highlight ruby %}
+```ruby
 export LD_LIBRARY_PATH=/usr/local/lib
 export LDFLAGS="-L/user/local/lib/ -I/usr/local/include/"
 export CFLAGS="-I/usr/local/include/"
-{% endhighlight %}
+```
