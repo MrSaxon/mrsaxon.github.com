@@ -94,3 +94,4 @@ ul.info>li>a>img {width: 32px;height: 32px;margin-right: 10px;}
 .article-block>ul.article-list>li, .page-block>ul.page-list>li { position: relative; border-top: 1px dashed #c7c7c7; padding-left: 5em; min-height: 4.5em; line-height: 4.5em; } 
 .article-block>ul.article-list>li>span.post-date,.page-block>ul.page-list>li>span.post-date { position: absolute;font-size: 0.9em;line-height: 3.0em;text-transform: uppercase;left: 0em;top: 1.8em; }
 .article-block>ul.article-list>li>h3, .page-block>ul.page-list>li>a { font-size: 1.1em; font-weight: bold; }
+pre { background-color: #262922; }

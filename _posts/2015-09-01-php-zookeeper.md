@@ -7,14 +7,14 @@ tags: ["Zookeeper"]
 ---
 {% include JB/setup %}
 
-###扩展下载地址
+### 扩展下载地址
 https://github.com/andreiz/php-zookeeper
 
-###安装
+### 安装
 php-zookeeper扩展需要依赖libzookeeper，翻阅zookeeper官方文档
 [传送门](http://zookeeper.apache.org/doc/r3.1.2/zookeeperProgrammers.html) ，我们下载对应zookeeper集群版本一致的软件包，进行解压缩，利用源码中c语言版本源码进行lib安装
 
-```sh
+```ruby
 cd [zookeeper tarball dir]/src/c   
 ./configure   
 make && make install   
@@ -24,7 +24,7 @@ make && make install
 
 下面继续php-zookeeper扩展的安装   
 
-```sh
+```ruby
 cd [php-zookeeper-master]   
 phpize   
 ./configure --with-php-config=[php-config-dir] --with-libzookeeper-dir=/usr/local   

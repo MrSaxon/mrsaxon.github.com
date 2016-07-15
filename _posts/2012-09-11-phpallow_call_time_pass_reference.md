@@ -15,7 +15,7 @@ tags: ["PHP配置", "引用配置"]
 
 php.ini的原文如下：
 
-```php
+```ruby
 ; Whether to enable the ability to force arguments to be passed by reference
 ; at function call time.  This method is deprecated and is likely to be
 ; unsupported in future versions of PHP/Zend.  The encouraged method of

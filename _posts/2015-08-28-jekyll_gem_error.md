@@ -13,7 +13,8 @@ ERROR:  Could not find a valid gem 'jekyll' (>= 0), here is why:
 ```   
 
 解决办法
-```ruby   
+
+```ruby
 $ gem sources --remove https://rubygems.org/   
 $ gem sources -a https://ruby.taobao.org/   
 $ sudo gem update --system   

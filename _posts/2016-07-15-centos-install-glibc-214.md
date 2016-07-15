@@ -10,8 +10,8 @@ tags: ["Linux", "Centos", "glibc"]
 根据项目上的需要，由于现有的操作系统glibc为2.12版本，需要升级至2.14版本，在此记录升级过程
 
 ### 操作系统版本
-```sh
-# cat /etc/issue
+```ruby
+$ cat /etc/issue
 CentOS release 6.3 (Final)
 Kernel \r on an \m
 
@@ -22,23 +22,23 @@ Kernel \r on an \m
 * glibc-linuxthreads-2.5 [下载](http://ftp.gnu.org/gnu/glibc/glibc-linuxthreads-2.5.tar.bz2)
 
 ### 升级过程
-```sh
+```ruby
 切换用户至root，不切换也可以，最后make install时候需要sudo权限
 
-# mkdir glibc-build && cd glibc-build
-# 放入下载好的软件列表或者不提前下载在此步骤进行wget
-# tar zxf glibc-2.14.tar.gz
-# cd glibc-2.14
-# tar jxf ../glibc-linuxthreads-2.5.tar.bz2
-# cd ../
-# ./glibc-2.14/configure --prefix=/usr --disable-profile --enable-add-ons --with-headers=/usr/include --with-binutils=/usr/bin
-# make
-# make install    (非root用户请使用 sudo make install, 并确保个人用户有sudo权限)
+$ mkdir glibc-build && cd glibc-build
+$ 放入下载好的软件列表或者不提前下载在此步骤进行wget
+$ tar zxf glibc-2.14.tar.gz
+$ cd glibc-2.14
+$ tar jxf ../glibc-linuxthreads-2.5.tar.bz2
+$ cd ../
+$ ./glibc-2.14/configure --prefix=/usr --disable-profile --enable-add-ons --with-headers=/usr/include --with-binutils=/usr/bin
+$ make
+$ make install    (非root用户请使用 sudo make install, 并确保个人用户有sudo权限)
 ```
 
 ### 检验是否成功
-```sh
-# ls -l /lib64/libc.so.6
+```ruby
+$ ls -l /lib64/libc.so.6
 lrwxrwxrwx 1 root root 12 7月  15 14:47 /lib64/libc.so.6 -> libc-2.14.so*
 ```
 
