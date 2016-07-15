@@ -43,6 +43,7 @@ lrwxrwxrwx 1 root root 12 7月  15 14:47 /lib64/libc.so.6 -> libc-2.14.so*
 ```
 
 ### 安装过程中遇到的问题
+
 #### 问题一：/usr/bin/ld报错
 /usr/bin/ld: cannot find -lnss_test1
 collect2: ld returned 1 exit status
