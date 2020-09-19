@@ -15,8 +15,7 @@ tagline: Supporting tagline
 		<hr>
 		<ul class="unstyled info">
 			<li><a target="_blank" href="mailto:saxon.zh@gmail.com"><img src="/assets/images/gmail.png" />saxon.zh@gmail.com</a></li>
-			<li><a target="_blank" href="http://weibo.com/zhjamie"><img src="/assets/images/weibo.png" />@A张春雨</a></li>
-			<li><a target="_blank" href="https://github.com/MrSaxon"><img src="/assets/images/github.jpeg" />MrSaxon</a></li>
+			<li><a target="_blank" href="https://github.com/saxon-zh"><img src="/assets/images/github.jpeg" />saxon-zh</a></li>
 		</ul>
 	</div>
 </div>
